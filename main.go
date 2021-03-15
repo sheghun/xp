@@ -46,7 +46,6 @@ func main() {
 	fileSize := fileStats.Size()
 	readTimes := math.Ceil(float64(fileSize) / float64(memoryLimitBytes))
 	reminder := fileSize % int64(memoryLimitBytes)
-	firstDataSorted := false
 
 	err = os.Mkdir("./output", os.ModePerm)
 
@@ -69,15 +68,9 @@ func main() {
 		strArr := lib.FilterStrings(strings.Split(string(buf), "\n"))
 
 		// Check if the first two strings read are sorted
-		if i <= 2 && lib.IsSorted(strArr) {
-			if i == 1 {
-				firstDataSorted = true
-			}
-
-			if firstDataSorted && i == 2 {
-				fmt.Println("File is already sorted")
-				os.Exit(0)
-			}
+		if i == 1 && lib.IsSorted(strArr) {
+			fmt.Println("File is already sorted")
+			os.Exit(0)
 		}
 
 		wg.Add(1)
