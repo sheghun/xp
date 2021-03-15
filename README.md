@@ -13,4 +13,4 @@ or
 
 `go run main_1.go --file ./test.txt`
 
-You can specify the max file size in mb using `--maxfilesize 2` it has to be an integer but it already has a default of 1mb
+You can specify the max file size in mb using `--maxfilesize 2` it has to be an integer it's not required as it already has a default of 1mb
