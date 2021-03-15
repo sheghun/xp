@@ -1,3 +1,3 @@
-module github.com/sheghun/xp.git
+module github.com/sheghun/xp
 
 go 1.15
