@@ -2,7 +2,7 @@ There are two files.
 
 `main_1.go` reads the whole file into memory sorts the strings and breaks the file into smaller parts of 500kb
 
-`main.go` reads the file by maxfilesize parts sorts the string and  breaks it into smaller files it repeats this whole process till it has finished reading files. 
+`main.go` reads the file by maxfilesize parts sorts the string and  breaks it into smaller files of 500kb it repeats this whole process till it reads the whole file. 
 
 
 How to run
