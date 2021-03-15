@@ -61,7 +61,7 @@ func main() {
 		// Push to a go routine
 		go func(i, numberOfDirectories, start, smallerFilesSize, maxFileSize, bufReminder int, group *sync.WaitGroup) {
 			defer wg.Done()
-			err := os.Mkdir(fmt.Sprintf("./output/%d", i), os.ModePerm)
+			err := os.MkdirAll(fmt.Sprintf("./output/%d", i), os.ModePerm)
 			if err != nil {
 				log.Fatalln("error occurred creating output directory", err)
 			}
