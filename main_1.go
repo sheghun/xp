@@ -18,7 +18,7 @@ func main() {
 
 	// Get file pat
 	filePath := flag.String("file", "", "File path")
-	fileThreshold := flag.Int("threshold", 1, "File threshold size in MB")
+	fileThreshold := flag.Int("maxfilesize", 1, "File threshold size in MB")
 	flag.Parse()
 
 	if *filePath == "" {
